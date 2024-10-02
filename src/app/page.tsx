@@ -5,7 +5,6 @@ import { Projects } from '@/app/work/components/Projects';
 
 import { about, baseURL, home, newsletter, person, routes } from '@/app/resources'
 import { Mailchimp } from '@/app/components';
-import { Posts } from '@/app/blog/components/Posts';
 
 export function generateMetadata() {
 	const title = home.title;
@@ -112,11 +111,6 @@ export default function Home() {
 			<RevealFx translateY="16" delay={0.6}>
 				<Projects range={[1,1]}/>
 			</RevealFx>
-			{routes['/blog'] && (
-				<Flex fillWidth paddingX="20">
-					<Posts range={[1,2]} columns="2"/>
-				</Flex>
-			)}
 			<Projects range={[2]}/>
 			{ newsletter.display &&
 				<Mailchimp/>

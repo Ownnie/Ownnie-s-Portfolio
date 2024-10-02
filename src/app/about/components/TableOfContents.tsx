@@ -48,44 +48,44 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
             {structure
                 .filter(section => section.display)
                 .map((section, sectionIndex) => (
-                <Flex key={sectionIndex} gap="12" direction="column">
-                    <Flex
-                        style={{ cursor: 'pointer' }}
-                        className={styles.hover}
-                        gap="8"
-                        alignItems="center"
-                        onClick={() => scrollTo(section.title, 80)}>
+                    <Flex key={sectionIndex} gap="12" direction="column">
                         <Flex
-                            height="1" width="16"
-                            background="neutral-strong">
+                            style={{ cursor: 'pointer' }}
+                            className={styles.hover}
+                            gap="8"
+                            alignItems="center"
+                            onClick={() => scrollTo(section.title, 80)}>
+                            <Flex
+                                height="1" width="16"
+                                background="neutral-strong">
+                            </Flex>
+                            <Text>
+                                {section.title}
+                            </Text>
                         </Flex>
-                        <Text>
-                            {section.title}
-                        </Text>
-                    </Flex>
-                    {about.tableOfContent.subItems && (
-                        <>
-                            {section.items.map((item, itemIndex) => (
-                                <Flex
-                                    key={itemIndex}
-                                    style={{ cursor: 'pointer' }}
-                                    className={styles.hover}
-                                    gap="12" paddingLeft="24"
-                                    alignItems="center"
-                                    onClick={() => scrollTo(item, 80)}>
+                        {about.tableOfContent.subItems && (
+                            <>
+                                {section.items.map((item, itemIndex) => (
                                     <Flex
-                                        height="1" width="8"
-                                        background="neutral-strong">
+                                        key={itemIndex}
+                                        style={{ cursor: 'pointer' }}
+                                        className={styles.hover}
+                                        gap="12" paddingLeft="24"
+                                        alignItems="center"
+                                        onClick={() => scrollTo(item, 80)}>
+                                        <Flex
+                                            height="1" width="8"
+                                            background="neutral-strong">
+                                        </Flex>
+                                        <Text>
+                                            {item}
+                                        </Text>
                                     </Flex>
-                                    <Text>
-                                        {item}
-                                    </Text>
-                                </Flex>
-                            ))}
-                        </>
-                    )}
-                </Flex>
-            ))}
+                                ))}
+                            </>
+                        )}
+                    </Flex>
+                ))}
         </Flex>
     );
 };
