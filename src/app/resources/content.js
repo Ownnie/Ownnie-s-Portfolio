@@ -82,25 +82,55 @@ const about = {
                 company: 'The Wine Cellar',
                 timeframe: 'December 2023 - January 2024',
                 role: 'Customer Service and Sales',
+                location: 'Bogota D.C.',
                 achievements: [
-                    <>Provided personalized customer service, ensuring a positive shopping experience and resolving inquiries promptly.</>,
-                    <>Supported inventory management, ensuring products were always available for customers.</>,
-                    <>Contributed to sales during peak season through product promotion and personalized recommendations.</>
+                    <>Provided personalized customer service and resolved inquiries to ensure a positive shopping experience.</>,
+                    <>Supported inventory management and ensured product availability during peak seasons.</>,
+                    <>Contributed to an 8.7% increase in seasonal sales through effective product promotion and customer engagement.</>,
+                    <>Assisted clients in enhancing their online presence by defining requirements and implementing tailored solutions.</>
                 ],
-                images: []
+                images: [
+                    {
+                        src: '/images/projects/wine-cellar/project-01.jpg',
+                        alt: 'Wine Cellar Customer Service',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/wine-cellar/project-02.jpg',
+                        alt: 'Wine Cellar Inventory Management',
+                        width: 16,
+                        height: 9
+                    }
+                ]
             },
             {
                 company: 'Freelance',
                 timeframe: 'November 2022 – June 2024',
                 role: 'Web Developer',
                 achievements: [
-                    <>Provided Web App and Web Site development services for various clients, creating web and mobile applications using React, WordPress, Tailwind and Bootstrap.</>,
-                    <>Designed and developed user interfaces, ensuring responsive and engaging applications tailored to client needs.</>
+                    <>Developed web applications and responsive websites for various clients using React, WordPress, Tailwind, and Bootstrap.</>,
+                    <>Created user-friendly interfaces and delivered solutions tailored to client needs, ensuring high client satisfaction and retention.</>,
+                    <>Assisted clients in increasing their digital presence through targeted web solutions.</>
                 ],
-                images: []
+                images: [
+                    {
+                        src: '/images/projects/freelance/project-01.jpg',
+                        alt: 'Freelance Web Development',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/freelance/project-02.jpg',
+                        alt: 'Freelance UI Design',
+                        width: 16,
+                        height: 9
+                    }
+                ]
             }
         ]
     },
+
     studies: {
         display: true, // set to false to hide this section
         title: 'Studies',
