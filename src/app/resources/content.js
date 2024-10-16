@@ -29,12 +29,12 @@ const social = [
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/in/luis-nicol%C3%A1s-calder%C3%B3n-correa-449923251/',
+        link: 'https://www.linkedin.com/in/nico-calderon/',
     },
     {
         name: 'X',
         icon: 'x',
-        link: '',
+        link: 'https://x.com/OwnnieNs',
     },
     {
         name: 'Email',
