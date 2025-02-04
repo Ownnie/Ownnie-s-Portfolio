@@ -8,19 +8,17 @@ const person = {
     },
     role: 'Full-Stack Developer | Cloud Solutions Architect | AI Enthusiast',
     avatar: '/images/avatar.jpg',
-    location: 'America/Bogota',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Spanish']  // optional: Leave the array empty if you don't want to display languages
-}
+    location: 'America/Bogota',
+    languages: ['English', 'Spanish']
+};
 
 const newsletter = {
     display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
-}
+    description: <>I occasionally write about software development, cloud technologies, and AI innovations.</>
+};
 
 const social = [
-    // Links are automatically displayed.
-    // Import new icons in /once-ui/icons.ts
     {
         name: 'GitHub',
         icon: 'github',
@@ -39,19 +37,17 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'nico.calderon.correa@gmail.com',
+        link: 'mailto:nico.calderon.correa@gmail.com',
     },
-]
-
-
+];
 
 const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Full-Stack Developer and Cloud Architect Junior</>,
-    subline: <>I'm Nicolas, a passionate and versatile <InlineCode>Software Engineer</InlineCode> from Bogotá, Colombia<br />  dedicated to exploring and implementing cutting-edge full-stack technologies</>
-}
+    headline: <>Full-Stack Developer and Cloud Architect</>,
+    subline: <>I'm Nicolas, a passionate <InlineCode>Software Engineer</InlineCode> from Bogotá, Colombia, dedicated to implementing cutting-edge full-stack technologies.</>
+};
 
 const about = {
     label: 'About',
@@ -65,64 +61,66 @@ const about = {
         display: true
     },
     calendar: {
-        display: true,
+        display: false,
         link: 'https://cal.com'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Hello! I'm Nicolas Calderon, a versatile Software Engineer deeply interested in exploring AI, Cloud and Full-Stack technologies, hailing from Bogotá, Colombia. With a robust background in full-stack development and driven by a passion for precision and delivering meaningful outcomes for customer satisfaction, which in turn drives business success.</>
-
+        description: <>Hello! I'm Nicolas Calderon, a versatile Software Engineer specializing in AI, Cloud, and Full-Stack development, passionate about delivering innovative and scalable solutions.</>
     },
     work: {
-        display: true, // set to false to hide this section
+        display: true,
         title: 'Work Experience',
         experiences: [
             {
-                company: 'The Wine Cellar',
-                timeframe: 'December 2023 - January 2024',
-                role: 'Customer Service and Sales',
-                location: 'Bogota D.C.',
-                achievements: [
-                    <>Provided personalized customer service and resolved inquiries to ensure a positive shopping experience.</>,
-                    <>Supported inventory management and ensured product availability during peak seasons.</>,
-                    <>Contributed to an 8.7% increase in seasonal sales through effective product promotion and customer engagement.</>,
-                    <>Assisted clients in enhancing their online presence by defining requirements and implementing tailored solutions.</>
-                ],
-                images: [
-                    {
-                        src: '/images/projects/wine-cellar/project-01.jpg',
-                        alt: 'Wine Cellar Customer Service',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/wine-cellar/project-02.jpg',
-                        alt: 'Wine Cellar Inventory Management',
-                        width: 16,
-                        height: 9
-                    }
-                ]
-            },
-            {
                 company: 'Freelance',
-                timeframe: 'November 2022 – June 2024',
-                role: 'Web Developer',
+                timeframe: 'April 2023 – Present',
+                role: 'Full-Stack Developer',
                 achievements: [
-                    <>Developed web applications and responsive websites for various clients using React, WordPress, Tailwind, and Bootstrap.</>,
-                    <>Created user-friendly interfaces and delivered solutions tailored to client needs, ensuring high client satisfaction and retention.</>,
-                    <>Assisted clients in increasing their digital presence through targeted web solutions.</>
+                    <>Developed scalable web applications using React, Angular, Next.js, and Node.js.</>,
+                    <>Built a subscription-based restaurant platform, reducing manual workload by 100%.</>,
+                    <>Created AI-integrated solutions for workflow optimization, reducing redundant proposals by 30%.</>
                 ],
                 images: [
                     {
                         src: '/images/projects/freelance/project-01.jpg',
-                        alt: 'Freelance Web Development',
+                        alt: 'Scalable web solutions',
                         width: 16,
                         height: 9
                     },
                     {
                         src: '/images/projects/freelance/project-02.jpg',
-                        alt: 'Freelance UI Design',
+                        alt: 'Subscription-based platform',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/freelance/project-03.jpg',
+                        alt: 'Ai-integrated solutions',
+                        width: 16,
+                        height: 9
+                    }
+                ]
+            },
+            {
+                company: 'McDonald’s (Arcos Dorados)',
+                timeframe: 'October 2024 – January 2025',
+                role: 'Crew Member',
+                achievements: [
+                    <>Provided high-quality customer service in a fast-paced environment.</>,
+                    <>Developed teamwork and adaptability skills.</>
+                ],
+                images: [
+                    {
+                        src: '/images/projects/mcdonalds/project-01.jpg',
+                        alt: 'Mcdonadls Customer Service',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/mcdonalds/project-02.jpg',
+                        alt: 'Mcdonadls Teamwork',
                         width: 16,
                         height: 9
                     }
@@ -130,36 +128,41 @@ const about = {
             }
         ]
     },
-
     studies: {
-        display: true, // set to false to hide this section
-        title: 'Studies',
+        display: true,
+        title: 'Education',
         institutions: [
             {
                 name: 'Pontificia Universidad Javeriana',
-                description: <>Bachelor’s degree in Software Engineering (June 2022 – December 2026)</>,
+                description: <>Bachelor’s Degree in Software Engineering (January 2022 – December 2026)</>,
+            },
+            {
+                name: 'Polytechnic University of Madrid',
+                description: <>Software Architecture Exchange Program (January 2025 – July 2025)</>,
             },
             {
                 name: 'Amazon Academy',
-                description: <>AWS Academy Cloud Foundations (July 2024 – September 2024, 20 hours)</>,
-            },
-            {
-                name: 'Udemy',
-                description: <>React desde cero: Hooks y State hasta TypeScript, Zod, Zustand, React Query, Next.js, React Router, MERN y PERN (April 2024 – November 2024, 60 hours)</>,
+                description: <>AWS Academy Cloud Foundations (July 2024 – September 2024)</>,
             }
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
-        title: 'Technical skills',
+        display: true,
+        title: 'Technical Skills',
         skills: [
             {
                 title: 'Programming Languages',
                 description: <>JavaScript, TypeScript, Java, C++, Kotlin</>,
                 images: [
                     {
-                        src: '/images/projects/programming-languages.jpg',
-                        alt: 'Programming Languages Image',
+                        src: '/images/projects/mcdonalds/project-01.jpg',
+                        alt: 'Mcdonadls Customer Service',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/mcdonalds/project-02.jpg',
+                        alt: 'Mcdonadls Teamwork',
                         width: 16,
                         height: 9
                     }
@@ -167,11 +170,17 @@ const about = {
             },
             {
                 title: 'Web Technologies',
-                description: <>React, Angular, Next.js, Node.js, Express, HTML, CSS, Tailwind, Spring boot</>,
+                description: <>React, Angular, Next.js, Node.js, Tailwind, Spring Boot</>,
                 images: [
                     {
-                        src: '/images/projects/web-technologies.jpg',
-                        alt: 'Web Technologies Image',
+                        src: '/images/projects/mcdonalds/project-01.jpg',
+                        alt: 'Mcdonadls Customer Service',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/mcdonalds/project-02.jpg',
+                        alt: 'Mcdonadls Teamwork',
                         width: 16,
                         height: 9
                     }
@@ -182,20 +191,14 @@ const about = {
                 description: <>AWS, Azure</>,
                 images: [
                     {
-                        src: '/images/projects/cloud-platforms.jpg',
-                        alt: 'Cloud Platforms Image',
+                        src: '/images/projects/mcdonalds/project-01.jpg',
+                        alt: 'Mcdonadls Customer Service',
                         width: 16,
                         height: 9
-                    }
-                ]
-            },
-            {
-                title: 'DevOps Tools',
-                description: <>Docker, Kubernetes</>,
-                images: [
+                    },
                     {
-                        src: '/images/projects/devops-tools.jpg',
-                        alt: 'DevOps Tools Image',
+                        src: '/images/projects/mcdonalds/project-02.jpg',
+                        alt: 'Mcdonadls Teamwork',
                         width: 16,
                         height: 9
                     }
@@ -203,130 +206,36 @@ const about = {
             },
             {
                 title: 'Database Systems',
-                description: <>MySQL, MongoDB, PostgreSQL, AWS Databases</>,
+                description: <>MySQL, PostgreSQL, MongoDB, Firebase, Supabase</>,
                 images: [
                     {
-                        src: '/images/projects/database-systems.jpg',
-                        alt: 'Database Systems Image',
+                        src: '/images/projects/mcdonalds/project-01.jpg',
+                        alt: 'Mcdonadls Customer Service',
                         width: 16,
                         height: 9
-                    }
-                ]
-            },
-            {
-                title: 'Backend Technologies',
-                description: <>RESTful APIs, Microservices Architecture</>,
-                images: [
+                    },
                     {
-                        src: '/images/projects/backend-technologies.jpg',
-                        alt: 'Backend Technologies Image',
-                        width: 16,
-                        height: 9
-                    }
-                ]
-            },
-            {
-                title: 'Soft Skills',
-                description: <>Problem-solving, Communication, Team Collaboration, Adaptability, Customer Focus, Attention to Detail, Quick Learning, Willingness to Learn</>,
-                images: [
-                    {
-                        src: '/images/projects/soft-skills.jpg',
-                        alt: 'Soft Skills Image',
+                        src: '/images/projects/mcdonalds/project-02.jpg',
+                        alt: 'Mcdonadls Teamwork',
                         width: 16,
                         height: 9
                     }
                 ]
             }
         ]
-
     }
-}
+};
 
 const work = {
     label: 'Work',
-    title: 'My projects',
-    description: `Design and dev projects by ${person.name}`
-    // Create new project pages by adding a new .mdx file to app/blog/posts
-    // All projects will be listed on the /home and /work routes
-}
+    title: 'My Projects',
+    description: `Portfolio of projects by ${person.name}`
+};
 
 const gallery = {
     label: 'Gallery',
-    title: 'My photo gallery',
-    description: `A photo collection by ${person.name}`,
-    // Images from https://pexels.com
-    images: [
-        {
-            src: '/images/gallery/img-01.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-02.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-03.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-04.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-05.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-06.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-07.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-08.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-09.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-10.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-11.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-12.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-13.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-14.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-    ]
-}
+    title: 'My Portfolio Gallery',
+    description: `A visual collection of projects and experiences by ${person.name}`
+};
 
 export { person, social, newsletter, home, about, work, gallery };

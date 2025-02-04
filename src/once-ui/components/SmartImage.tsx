@@ -73,7 +73,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
         };
     };
 
-    const isVideo = src.endsWith('.mp4');
+    const isVideo = src ? src.endsWith('.mp4') : false;
 
     return (
         <>
@@ -88,8 +88,8 @@ const SmartImage: React.FC<SmartImageProps> = ({
                     height: aspectRatio
                         ? undefined
                         : height
-                        ? `${height}rem`
-                        : '100%',
+                            ? `${height}rem`
+                            : '100%',
                     aspectRatio,
                     cursor: enlarge ? 'pointer' : 'default',
                     borderRadius: isEnlarged ? '0' : radius ? `var(--radius-${radius})` : undefined,
@@ -121,7 +121,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
                         src={src}
                         alt={alt}
                         fill
-                        style={{ 
+                        style={{
                             objectFit: isEnlarged ? 'contain' : objectFit,
                         }}
                     />
@@ -159,7 +159,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
                                 loop
                                 muted
                                 playsInline
-                                style={{ 
+                                style={{
                                     width: '90vw',
                                     height: 'auto',
                                     objectFit: 'contain',
